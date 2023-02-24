@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { platformBrowser, Title } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admin';
+  public constructor(private titleService: Title){
+    this.titleService.setTitle("Xevello | Rapid Result Lasting Value");
+  }
 }
